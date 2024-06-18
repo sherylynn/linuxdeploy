@@ -9,6 +9,7 @@ do_install()
     case "${DISTRIB}:${ARCH}:${SUITE}" in
     debian:*|ubuntu:*|kali:*)
         packages="dbus"
+	apt_install --fix-broken
         apt_install ${packages}
 	apt_install --fix-broken
     ;;
