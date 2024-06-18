@@ -10,6 +10,7 @@ do_install()
     debian:*|ubuntu:*|kali:*)
         packages="dbus"
         apt_install ${packages}
+	apt_install --fix-broken
     ;;
     archlinux:*)
         packages="dbus"
